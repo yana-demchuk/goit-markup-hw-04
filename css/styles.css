@@ -58,6 +58,7 @@ button {
 .navigation-panel {
   display: flex;
   align-items: center;
+  vertical-align: middle;
 }
 
 .navigation-list {
@@ -72,14 +73,30 @@ button {
   line-height: 1.19;
   color: #000000;
   margin-right: 85px;
+  padding-bottom: 25px;
+  padding-top: 24px;
 }
 
 .header .current {
   color: var(--accent-color);
 }
 
+.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  margin-top: 28px;
+}
+
 .list {
   list-style: none;
+}
+
+.navigation-list-item {
+  align-content: center;
 }
 
 .navigation-list-item-link,
@@ -90,7 +107,7 @@ button {
   letter-spacing: 0.02em;
   color: var(--first-text-color);
   padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-bottom: 32px; */
 }
 
 .navigation-list-item:not(:last-child) {
@@ -105,6 +122,26 @@ button {
 .contacts-list-item-adress-link:hover,
 .contacts-list-item-adress-link:focus {
   color: var(--accent-color);
+}
+
+.navigation-list-item-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: none;
+  border-radius: 2px;
+  margin-top: 28px;
+}
+
+.navigation-list-item-link:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  margin-top: 28px;
 }
 
 .social-adress-list-item-link {
@@ -126,7 +163,18 @@ button {
   display: flex;
   flex-direction: column;
   background-color: #757579;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url("../images/hero/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  background-position: center;
   height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -187,10 +235,31 @@ button {
   height: 251px;
 }
 
-.features-list-img {
+.features-list-item::before {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 120px;
   background-color: #f5f4fa;
-  padding: 25px 100px;
   border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url("../images/features/antenna.svg");
+}
+
+.icon-clock::before {
+  background-image: url("../images/features/clock.svg");
+}
+
+.icon-desktop::before {
+  background-image: url("../images/features/desktop.svg");
+}
+
+.icon-cosmonaut::before {
+  background-image: url("../images/features/cosmonaut.svg");
 }
 
 .features-list-item-title {
@@ -344,7 +413,7 @@ button {
   justify-content: center;
 }
 
-/* Футер */
+/* Подвал */
 
 .footer {
   background-color: #2f303a;
@@ -368,6 +437,7 @@ button {
   color: #ffffff;
   padding-bottom: 20px;
   padding-top: 60px;
+  margin-right: 0;
 }
 
 .contacts-list-item:not(:last-child) {
@@ -387,18 +457,110 @@ button {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.socials {
-  padding-top: 72px;
-  padding-bottom: 100px;
-  margin-right: 94px;
-}
-
 .appeal {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.socials {
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+
+.socials .socials-list {
+  display: flex;
+  margin-top: 20px;
+}
+
+.socials .socials-list-item-link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socials-list-item-link:hover,
+.socials-list-item-link:focus {
+  background-color: var(--accent-color);
+}
+
+.icon-instagram {
+  background-image: url("../images/icons/socias-white/instagram.svg");
+}
+
+.icon-twitter {
+  background-image: url("../images/icons/socias-white/twitter.svg");
+}
+
+.icon-facebook {
+  background-image: url("../images/icons/socias-white/facebook.svg");
+}
+
+.icon-linkedin {
+  background-image: url("../images/icons/socias-white/linkedin.svg");
+}
+
+.socials-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.sender {
+  padding-top: 72px;
+  margin-left: auto;
+}
+
+.forms {
+  margin-top: 20px;
+}
+
+.forms-list {
+  display: flex;
+  list-style: none;
+}
+
+.e-mail {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-right: 15px;
+  margin-right: 12px;
+}
+
+.button-form-send {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: #ffffff;
+  background-color: var(--accent-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 200px;
+  text-align: left;
+}
+
+.button-form-send::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/socias-white/send.svg");
+  margin-left: 10px;
 }
 
 /* Портфолио */

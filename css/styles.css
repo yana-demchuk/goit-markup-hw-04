@@ -187,7 +187,7 @@ button {
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url("./images/hero/bg.jpg");
+    url("../images/hero/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1600px;
@@ -526,19 +526,19 @@ button {
 }
 
 .icon-instagram {
-  background-image: url("./images/icons/instagram.svg");
+  background-image: url("../images/icons/instagram.svg");
 }
 
 .icon-twitter {
-  background-image: url("./images/icons/twitter.svg");
+  background-image: url("../images/icons/twitter.svg");
 }
 
 .icon-facebook {
-  background-image: url("./images/icons/facebook.svg");
+  background-image: url("../images/icons/facebook.svg");
 }
 
 .icon-linkedin {
-  background-image: url("./images/icons/linkedin.svg");
+  background-image: url("../images/icons/linkedin.svg");
 }
 
 .socials-list-item:not(:last-child) {
@@ -594,7 +594,7 @@ button {
   vertical-align: middle;
   width: 24px;
   height: 24px;
-  background-image: url("./images/icons/send.svg");
+  background-image: url("../images/icons/send.svg");
   margin-left: 10px;
 }
 

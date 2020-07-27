@@ -107,7 +107,6 @@ button {
   letter-spacing: 0.02em;
   color: var(--first-text-color);
   padding-top: 32px;
-  /* padding-bottom: 32px; */
 }
 
 .navigation-list-item:not(:last-child) {
@@ -146,6 +145,27 @@ button {
 
 .social-adress-list-item-link {
   color: var(--secondary-text-color);
+}
+
+.icon-email {
+  width: 16px;
+  height: 11.2px;
+}
+
+.icon-phone {
+  width: 10px;
+  height: 14.94px;
+}
+
+.icon-email,
+.icon-phone {
+  margin-right: 10px;
+  fill: var(--secondary-text-color);
+}
+
+.social-adress-list-item-link:hover .icon-email,
+.social-adress-list-item-link:hover .icon-phone {
+  fill: var(--accent-color);
 }
 
 .social-adress-list {
@@ -235,31 +255,13 @@ button {
   height: 251px;
 }
 
-.features-list-item::before {
-  content: "";
-  display: block;
-  width: 270px;
-  height: 120px;
+.features-svg {
+  width: 70px;
+  height: 70px;
+  padding: 25px 100px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-antenna::before {
-  background-image: url("../images/features/antenna.svg");
-}
-
-.icon-clock::before {
-  background-image: url("../images/features/clock.svg");
-}
-
-.icon-desktop::before {
-  background-image: url("../images/features/desktop.svg");
-}
-
-.icon-cosmonaut::before {
-  background-image: url("../images/features/cosmonaut.svg");
+  margin-bottom: 30px;
 }
 
 .features-list-item-title {
@@ -268,7 +270,6 @@ button {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--first-text-color);
-  margin-top: 30px;
 }
 
 .features-list-item-text {
@@ -378,12 +379,30 @@ button {
 }
 
 .social-list-item-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 
 .social-list-item:not(:last-child) {
   margin-right: 10px;
+}
+
+.social-svg {
+  fill: #afb1b8;
+  position: center;
+}
+
+.social-list-item-link:hover {
+  background-color: var(--accent-color);
+}
+
+.social-list-item-link:hover .social-svg {
+  fill: #ffffff;
 }
 
 /* Постоянные клиенты */
@@ -402,15 +421,31 @@ button {
   padding-bottom: 94px;
 }
 
+.clients-list-item:hover {
+  border-color: var(--accent-color);
+}
+
 .clients-list-item-link {
   box-sizing: border-box;
+  display: flex;
   width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.clients-list-item-link:hover {
+  border-color: var(--accent-color);
+}
+
+.clients-svg {
+  fill: #afb1b8;
+}
+
+.clients-list-item-link:hover .clients-svg {
+  fill: var(--accent-color);
 }
 
 /* Подвал */
@@ -491,19 +526,19 @@ button {
 }
 
 .icon-instagram {
-  background-image: url("../images/icons/socias-white/instagram.svg");
+  background-image: url("../images/icons/instagram.svg");
 }
 
 .icon-twitter {
-  background-image: url("../images/icons/socias-white/twitter.svg");
+  background-image: url("../images/icons/twitter.svg");
 }
 
 .icon-facebook {
-  background-image: url("../images/icons/socias-white/facebook.svg");
+  background-image: url("../images/icons/facebook.svg");
 }
 
 .icon-linkedin {
-  background-image: url("../images/icons/socias-white/linkedin.svg");
+  background-image: url("../images/icons/linkedin.svg");
 }
 
 .socials-list-item:not(:last-child) {
@@ -559,7 +594,7 @@ button {
   vertical-align: middle;
   width: 24px;
   height: 24px;
-  background-image: url("../images/icons/socias-white/send.svg");
+  background-image: url("../images/icons/send.svg");
   margin-left: 10px;
 }
 
@@ -604,7 +639,6 @@ button {
 
 .portfolio-example-list {
   display: flex;
-
   width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
@@ -619,14 +653,24 @@ button {
 .portfolio-example-list-item {
   width: 370px;
   height: 404px;
-  border: 1px solid #eeeeee;
+
   box-sizing: border-box;
   margin-right: 30px;
   margin-bottom: 30px;
 }
 
+.overlay-border {
+  border: 1px solid #eeeeee;
+  border-top-style: none;
+}
+
+.overlay-border:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
 .portfolio-example-list-item-project {
-  margin-top: 20px;
+  padding-top: 20px;
   padding-left: 24px;
   padding-right: 24px;
 
